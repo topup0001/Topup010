@@ -1,0 +1,83 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #ff69b4; /* Pink color for headings */
+    text-align: center;
+}
+.img img{
+    border-radius: 7px;
+}
+.img{
+    align-items: center;
+    display: fle;
+    justify-content: center;
+}
+.topup-option {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topup-details {
+    flex-grow: 1;
+}
+.topup-details h3 {
+    margin-top: 0;
+    color: #007bff; /* Blue color for option title */
+}
+.buy-button {
+    background-color: #28a745; /* Green color for buy button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.payment-methods {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.payment-methods h2 {
+    color: #17a2b8; /* Teal color for payment heading */
+    text-align: left;
+    margin-top: 0;
+}
+.payment-methods ul {
+    list-style-type: none;
+    padding: 0;
+}
+.payment-methods li {
+    margin-bottom: 8px;
+}
+.note {
+    color: #dc3545; /* Red color for important notes */
+    margin-top: 20px;
+    font-style: italic;
+}
+.contact-info {
+    text-decoration:none;
+    margin-top: 20px;
+    text-align: center;
+    color: #6c757d; /* Gray color for contact info */
+}

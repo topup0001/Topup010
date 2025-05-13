@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INFORMATION</title>
+  <style>
+  body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .payment-container {
+    
+    background-color: #fff;
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  # #payment-option {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 10px;
+  }
+  
+  #payment-option label {
+    background: rgba(255, 255, 255, 1);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding-top: 15px;
+  }
+  
+  
+  .payment-methods {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .payment-methods h2 {
+    color: red;
+    text-align: left;
+    margin-top: 0;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #popop {
+    display: none;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  #inpop img {
+    height: 70%;
+    width: 80%;
+    margin: 50px 0;
+    z-index: 20;
+  }
+  
+  #inpop {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    background: rgba(255, 255, 255, 1);
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    border-radius: 5px;
+  }
+  
+  #inpop h3 {
+    margin: 0 0 0 10px;
+  }
+  
+  .payment-option {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-option img {
+    max-height: 30px;
+  }
+  .form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  min-height: 80px;
+}
+</style>
+</head>
+
+<body>
+  <div class="form-container">
+  <h2>Enter Your Information</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    
+   
+    <input type="hidden" name="access_key" value="368ae1bb-0181-4154-9af1-c009ce51af80">
+    
+
+    <div class="form-group">
+      <label for="Game">Game Name:</label>
+      <input type="text" id="name" name="name"placeholder="Not exact but related" required>
+    </div>
+    <div class="form-group">
+      <label for="UID">UID:</label>
+      <input type="number" id="number" name="number" required>
+    </div>
+    <div class="form-group">
+      <label for="UID">Contact number Or Email:</label>
+      <input type="text" id="number" name="number" required>
+    </div>
+    <div class="form-group">
+      <label for="remark">Remark:</label>
+      <textarea id="remark" name="remark"></textarea>
+    </div>
+    
+   
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+  
+ 
+  <div class="payment-container">
+    
+    <h2>Choose Your Payment Method</h2>
+    
+    <form id="payment-option">
+      <div class="payment-option">
+        <label for="esewa"> <input type="radio" id="esewa" name="payment" value="esewa">Esewa<img src="esewa12.jpg" alt="Esewa" width="30"></label>
+      </div>
+      <div class="payment-option">
+        <label for="khalti"><input type="radio" id="khalti" name="payment" value="khalti">Khalti<img src="khalti1.jpg" alt="Khalti" height="30"></label>
+      </div>
+      <div class="payment-option">
+        <label for="imepay"><input type="radio" id="imepay" name="payment" value="ime">IME Pay <img src="ime1.jpg" alt="IME Pay" height="30"></label>
+      </div>
+      <div class="payment-option">
+        <label for="bank"> <input type="radio" id="bank" name="payment" value="bank">Bank Transfer <img src="bank1.jpg" alt="Bank Transfer" height="30"></label>
+      </div>
+      
+    
+    <button id="qrbtn">Show QR</button>
+    <button type="submit">Submit Form</button>
+  
+   
+  </div>
+  
+  <div id="popop">
+    <div id="inpop">
+      <img id="qrimg" src="esewa.jpg" alt="">
+      <h3>Remark in <span id="pay"></span> should be your uid.</h3>
+    </div>
+  </div>
+  <script>
+    let bg = document.getElementById("popop");
+    bg.addEventListener("click", () => {
+      bg.style.display = "none";
+    });
+    let img = document.getElementById("qrimg")
+    const qr = document.getElementById("qrbtn");
+    const radios = document.querySelectorAll('input[name="payment"]');
+    const paySpan = document.getElementById("pay");
+    
+    qr.addEventListener("click", function() {
+      let selectedValue = null;
+      radios.forEach((radio) => {
+        if (radio.checked) {
+          selectedValue = radio.value;
+        }
+      });
+      
+      if (selectedValue) {
+        paySpan.textContent = selectedValue;
+        img.src = `${selectedValue}.jpg`
+        document.getElementById("popop").style.display = "flex";
+      } else {
+        alert("Please select a payment method.");
+      }
+    });
+  </script>
+   </form>
+</body>
+
+</html>

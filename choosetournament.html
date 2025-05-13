@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Your Game</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #a7f3d0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    
+    .game-selector {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .game-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: start;
+    }
+    
+    .game-button-label {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    .game-button-label:hover {
+      background-color: black;
+    }
+    
+    .game-button-radio {
+      display: none;
+     
+    }
+    
+  
+    .game-button-radio:checked+.game-button-label {
+      background-color: #0056b3;
+     
+    }
+    </style>
+</head>
+
+<body>
+  <div class="game-selector">
+    <h2>Select.......</h2>
+    <form action="/your-game-handling-page" method="post">
+      <div class="game-buttons">
+        <a href="solo.html"> <label for="duo" class="game-button-label">SOLO</label></a>
+        <a href="duo.html"><label for="duo" class="game-button-label">DUO</label></a>
+        <a href="squad.html"><label for="squad" class="game-button-label">SQUAD</label></a>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
